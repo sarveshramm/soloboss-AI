@@ -87,7 +87,7 @@ function App() {
     setFetchedJobs(null);
 
     const targetQuery = jobSearchQuery || "developer";
-    const apiKey = "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";
+    const apiKey = "";
     
     // Explicit prompt to behave like a web scraper for Fiverr and LinkedIn
     const prompt = `You are a highly capable AI freelance agent. The user is looking for remote freelance jobs related to "${targetQuery}". Your task is to scrape and return exactly 3 highly realistic current job listings from Fiverr and LinkedIn. Return ONLY a valid JSON array of objects. Do not include any markdown formatting like \`\`\`json. Each object MUST have these exact keys: "title", "platform" (either "Fiverr" or "LinkedIn"), "client" (a realistic company or username), "budget" (e.g. "$50/hr" or "$800 fixed"), "description" (a brief 2-sentence realistic job description), and "link" (a realistic application URL for the job on the platform).`;
